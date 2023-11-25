@@ -12,5 +12,5 @@ def out_images(logo, logo_type='text'):
         logo_on_img(logo)
 
 if __name__ == '__main__':
-    # out_images('原神启动', logo_type='text')
-    out_images('data/images/WechatIMG38.jpg', logo_type='text')
+    out_images('有梗启动', logo_type='text')
+    # out_images('data/images/WechatIMG38.jpg', logo_type='image')

@@ -18,8 +18,8 @@ LOGGER = get_logger(__name__)
 
 def run():
     # start
-    st.set_page_config(page_title="有梗.ai", page_icon="😏")
-    st.title("😏 有梗.ai Team")
+    st.set_page_config(page_title="有梗.agents", page_icon="😏")
+    st.title("😏 有梗.agents")
 
     st.sidebar.success("可选择角色单独命令其工作")
 

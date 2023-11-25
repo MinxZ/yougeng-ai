@@ -71,7 +71,7 @@ class MemeAnalyzer(Role):
   def __init__(
     self,
     name: str = "耿文文",
-    profile: str = "Meme Analyzer",
+    profile: str = "热梗分析师",
     **kwargs,
   ):
     super().__init__(name, profile, **kwargs)

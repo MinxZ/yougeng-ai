@@ -43,7 +43,7 @@ def run_role():
             profile = f"{role._setting.name} ({role.profile})"
             result = asyncio.run(role.run(prompt))
             output_string = str(result.content)
-            output_string = output_string.replace("Meme Analyzer: ", "")
+            output_string = output_string.replace(f"{role.profile}: ", "")
             st.markdown(f"**{profile}:** \n\n{output_string}")
             logger.info(result.content)
 
