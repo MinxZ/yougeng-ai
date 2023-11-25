@@ -27,24 +27,11 @@ import asyncio
 from metagpt.roles.product_manager import ProductManager
 from metagpt.logs import logger
 
+from roles.coder import SimpleCoder
+
 
 LOGGER = get_logger(__name__)
 
-# model
-def get_chat_model():
-    BASE_URL = "https://autoagents-ca-east.openai.azure.com/"
-    API_KEY = "2864ce19a46540b2a0943df607ca6225"
-
-    model = AzureChatOpenAI(
-        temperature=0.5,
-        openai_api_base=BASE_URL,
-        openai_api_version="2023-08-01-preview",
-        deployment_name="gpt-4",
-        openai_api_key=API_KEY,
-        openai_api_type="azure",
-        streaming=True
-    )
-    return model
 
 def run():
     # start
@@ -64,13 +51,13 @@ def run():
     #     st.session_state.steps = {}
 
     # agent running
-    if prompt := st.chat_input(placeholder="有梗，启动！"):
+    if prompt := st.chat_input(placeholder="write a function that calculates the product of a list"):
         st.chat_message("user").write(prompt)
 
         with st.chat_message("assistant"):
-            msg = "Write a PRD for a snake game"
-            role = ProductManager()
-            result = asyncio.run(role.run(msg))
+            role = SimpleCoder()
+            logger.info(prompt)
+            result = asyncio.run(role.run(prompt))
             st.write(result)
             # logger.info(result.content[:100])
         

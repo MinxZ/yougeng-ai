@@ -110,3 +110,11 @@ ATTENTION: Use '##' to SPLIT SECTIONS, not '#'. AND '## <SECTION_NAME>' SHOULD W
 ## UI Design draft: Provide as Plain text. Be simple. Describe the elements and functions, also provide a simple style description and layout description.
 ## Anything UNCLEAR: Provide as Plain text. Make clear here.
 
+2023-11-25 10:38:32.815 | INFO     | metagpt.config:__init__:44 - Config loading done.
+2023-11-25 10:38:59.825 | INFO     | __main__:run:59 - hi
+2023-11-25 10:38:59.828 | DEBUG    | metagpt.roles.role:_set_state:167 - [SimpleWriteCode]
+2023-11-25 10:38:59.828 | DEBUG    | metagpt.roles.role:_react:263 - Alice(SimpleCoder): self._rc.state=0, will do SimpleWriteCode
+2023-11-25 10:38:59.828 | INFO     | roles.coder:_act:49 - Alice(SimpleCoder): ready to SimpleWriteCode
+2023-11-25 10:39:05.116 | INFO     | metagpt.provider.openai_api:update_cost:89 - Total running cost: $0.004 | Max budget: $10.000 | Current cost: $0.004, prompt_tokens: 66, completion_tokens: 27
+2023-11-25 10:39:05.116 | DEBUG    | metagpt.provider.base_gpt_api:aask:45 - [{'role': 'system', 'content': 'You are a SimpleCoder, named Alice, your goal is , and the constraint is . '}, {'role': 'user', 'content': '\n    Write a python function that can hi and provide two runnnable test cases.\n    Return ```python your_code_here ``` with NO other texts,\n    your code:\n    '}]
+2023-11-25 10:39:05.117 | DEBUG    | metagpt.roles.role:_set_state:167 - [SimpleWriteCode]
