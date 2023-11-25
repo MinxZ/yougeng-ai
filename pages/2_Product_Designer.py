@@ -11,6 +11,7 @@ from roles.meme_analyzer import MemeAnalyzer
 from metagpt.logs import logger
 
 from roles.product_designer import ProductDesigner
+import json
 
 
 DEFAULT_INPUT = "#AI的命也是命"
@@ -37,13 +38,26 @@ def run_role():
         # Display assistant response in chat message container
         with st.chat_message("assistant"):
             role = ProductDesigner()
+            
             logger.info(prompt)
-            profile = f"{role._setting.name} ({role.profile})"
             result = asyncio.run(role.run(prompt))
-            output_string = str(result.content)
-            output_string = output_string.replace(f"{role.profile}: ", "")
-            st.markdown(f"**{profile}:** \n\n{output_string}")
             logger.info(result.content)
+
+            profile = f"{role._setting.name} ({role.profile})"
+            st.markdown(f"**{profile}:** \n\n")
+
+            # 转换为 DataFrame
+            data = result.content
+            logger.info(data)
+            
+            # 创建列
+            columns = st.columns(len(data))
+
+            # 在每列中显示图片
+            for i, item in enumerate(data):
+                columns[i].write(f"## {item['topic']}")
+                for img_url in item['imgs']:
+                    columns[i].image(img_url, caption='Image', use_column_width=True)
 
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": result})
