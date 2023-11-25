@@ -1,1 +1,1 @@
-streamlit run Hello.py --server.enableCORS false --server.enableXsrfProtection false
+streamlit run Getting_Started.py --server.enableCORS false --server.enableXsrfProtection false
