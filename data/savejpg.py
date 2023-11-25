@@ -5,8 +5,8 @@ import leancloud
 # img_path = '/Users/z/Downloads/openai.jpg'
 
 def upload(img_path):
-    app_id = 'b8lJaEKYlx8gGtM8SbUgOWPJ-gzGzoHsz'
-    app_key = '0PmqcjGyAsWBdrpUgpNDx6ek'
+    app_id = 'Db7SYRSourdqRRckhnk89ykR-MdYXbMMI'
+    app_key = '5qJj7R3ijhUcc8ldKDFKUOQT'
     leancloud.init(app_id, app_key)
 
     with open(img_path, 'rb') as f:

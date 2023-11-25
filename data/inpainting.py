@@ -28,8 +28,8 @@ img.crop((322, 652, 2002, 2400)).save('data/images/tshirt.png')
 # img.save(tshirt_path)
 
 # save img to leancloud
-app_id = 'b8lJaEKYlx8gGtM8SbUgOWPJ-gzGzoHsz'
-app_key = '0PmqcjGyAsWBdrpUgpNDx6ek'
+app_id = 'Db7SYRSourdqRRckhnk89ykR-MdYXbMMI'
+app_key = '5qJj7R3ijhUcc8ldKDFKUOQT'
 leancloud.init(app_id, app_key)
 
 # img_path = '/Users/z/Downloads/openai.jpg'

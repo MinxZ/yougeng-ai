@@ -11,8 +11,8 @@ with open('/Users/z/img_cloth_dict2.json') as f:
 key = '3V0eoMvp959JMuTkVQC9vOPp9eu7oJO6m6alLXQLrS69Bz3GP08qpbAGJKjM'
 url = "https://stablediffusionapi.com/api/v5/fashion"
 
-app_id = 'b8lJaEKYlx8gGtM8SbUgOWPJ-gzGzoHsz'
-app_key = '0PmqcjGyAsWBdrpUgpNDx6ek'
+app_id = 'Db7SYRSourdqRRckhnk89ykR-MdYXbMMI'
+app_key = '5qJj7R3ijhUcc8ldKDFKUOQT'
 leancloud.init(app_id, app_key)
 
 def upload(img_path):
