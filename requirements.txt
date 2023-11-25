@@ -7,3 +7,4 @@ streamlit
 metagpt
 langchain
 duckduckgo-search
+leancloud
