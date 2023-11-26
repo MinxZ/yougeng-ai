@@ -16,6 +16,7 @@ def text_on_img(logo_text):
 
     logo_len = len(logo_text.split('\n')[0])
 
+    image_path_list = []
     for model, value in model_offset.items():
         img_width = model_offset[model][2]-model_offset[model][0]
 
@@ -35,5 +36,11 @@ def text_on_img(logo_text):
         img = Image.open(img_path)
         draw = ImageDraw.Draw(img)
         draw.text((model_offset[model][0], model_offset[model][1]+add_len), logo_text, font=font, fill=(255, 255, 255))
-        img.save(f'data/items/tshirt_{model}_{logo_text_copy}.png')
+        
+        img_path_final = f'data/items/tshirt_{model}_{logo_text_copy}.png'
+        img.save(img_path_final)
+
+        image_path_list.append(img_path_final)
+
+    return image_path_list
 
